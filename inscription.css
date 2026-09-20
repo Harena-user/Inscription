@@ -1,0 +1,276 @@
+/* ==========================
+   VARIABLES
+========================== */
+
+:root {
+
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+
+    --color-background: #f4f6f8;
+    --color-card: #ffffff;
+
+    --color-text: #222222;
+    --color-text-light: #666666;
+
+    --color-border: #cccccc;
+
+    --color-error: #dc2626;
+    --color-error-bg: #fef2f2;
+
+    --color-success: #15803d;
+    --color-success-bg: #f0fdf4;
+
+    --shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    --radius: 12px;
+}
+
+
+/* ==========================
+   RESET
+========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        var(--color-background);
+
+    color:
+        var(--color-text);
+}
+
+
+/* ==========================
+   CONTENEUR
+========================== */
+
+.container {
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* ==========================
+   CARTE
+========================== */
+
+.form-card {
+
+    width: 100%;
+    max-width: 450px;
+
+    padding: 30px;
+
+    background:
+        var(--color-card);
+
+    border-radius:
+        var(--radius);
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+/* ==========================
+   TITRES
+========================== */
+
+h1 {
+
+    margin-top: 0;
+
+    text-align: center;
+}
+
+.intro {
+
+    text-align: center;
+
+    color:
+        var(--color-text-light);
+
+    margin-bottom: 25px;
+}
+
+
+/* ==========================
+   FORMULAIRE
+========================== */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-weight: bold;
+}
+
+.required {
+
+    color:
+        var(--color-error);
+}
+
+input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border:
+        1px solid var(--color-border);
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+input:focus {
+
+    border-color:
+        var(--color-primary);
+}
+
+input.invalid {
+
+    border-color:
+        var(--color-error);
+
+    background:
+        var(--color-error-bg);
+}
+
+
+/* ==========================
+   ERREURS
+========================== */
+
+.error {
+
+    display: block;
+
+    min-height: 18px;
+
+    margin-top: 5px;
+
+    color:
+        var(--color-error);
+
+    font-size: 13px;
+}
+
+
+/* ==========================
+   BOUTON
+========================== */
+
+button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        var(--color-primary);
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+
+    background:
+        var(--color-primary-hover);
+}
+
+
+/* ==========================
+   MESSAGE GLOBAL
+========================== */
+
+.form-message {
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.form-message.success {
+
+    color:
+        var(--color-success);
+}
+
+.form-message.error {
+
+    color:
+        var(--color-error);
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 480px) {
+
+    .container {
+
+        padding: 12px;
+    }
+
+    .form-card {
+
+        padding: 20px;
+    }
+
+    h1 {
+
+        font-size: 24px;
+    }
+
+    input,
+    button {
+
+        min-height: 48px;
+    }
+}
