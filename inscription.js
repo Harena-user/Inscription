@@ -249,8 +249,8 @@ form.addEventListener(
 // ==========================
 
 // Remplace ces deux constantes par tes vraies clés trouvées dans Supabase (Project Settings > API)
-const SUPABASE_URL = "https://TON_PROJET.supabase.co";
-const SUPABASE_ANON_KEY = "TA_CLE_ANON_PUBLIQUE";
+const SUPABASE_URL = "https://chbdlfwkfxwbiktcvdiz.supabase.co/rest/v1/";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNoYmRsZndrZnh3YmlrdGN2ZGl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk5MjA3NzgsImV4cCI6MjEwNTQ5Njc3OH0.7Uf-eSlky49OtEKQFCUEnKzt0LnzOOxCnO9z9a0SM0g";
 
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -489,11 +489,11 @@ form.addEventListener(
         const prenomVal = cleanText(document.getElementById("prenom").value);
         const emailVal = cleanText(document.getElementById("email").value);
 
-        // Envoi vers Supabase (Table 'inscriptions')
+        // Envoi vers Supabase (Table 'Inscription')
         const { data, error } = await supabase
-            .from("inscriptions")
+            .from("Inscription")
             .insert([
-                { nom: nomVal, prenom: prenomVal, email: emailVal }
+                { nom: nomVal, prenom: prenomVal, mail: emailVal }
             ]);
 
         // Gestion du résultat
